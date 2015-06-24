@@ -1,0 +1,42 @@
+.article {
+  width: 100%;
+  overflow: hidden;
+}
+
+.figure.-original .figure__image {
+  width: auto;
+  position: relative;
+  z-index: 1;
+  left: -62px;
+}
+
+.russlandhaus__section {
+  position: relative;
+}
+
+.russlandhaus__section:before {
+  content: "";
+  position: absolute;
+  left: 580px;
+  bottom: 0;
+  top: 0;
+  width: 220px;
+  background-repeat: repeat-y;
+  z-index: 0;
+}
+
+.russlandhaus__section.-section-1:before {
+  background-image: url(images/0_background1.png);
+}
+.russlandhaus__section.-section-2:before {
+  background-image: url(images/0_background2.png);
+}
+.russlandhaus__section.-section-3:before {
+  background-image: url(images/0_background3.png);
+}
+.russlandhaus__section.-section-4:before {
+  background-image: url(images/0_background4.png);
+}
+.russlandhaus__section.-section-5:before {
+  background-image: url(images/0_background5.png);
+}
