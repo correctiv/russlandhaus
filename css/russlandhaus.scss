@@ -1,5 +1,5 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# main scss file for https://github.com/correctiv/russlandhaus/
 ---
 @charset "utf-8";
 
@@ -46,20 +46,98 @@
   background-image: url(../images/0_background4.png);
 }
 
-.russlandhaus__section.-section-5 figure {
+.russlandhaus__section figure {
   display: block;
   position: relative;
   z-index: 0;
 }
 
-.russlandhaus__section.-section-5 figure:before {
+%russlandhaus__animation {
   content: "";
-  width: 210px;
-  height: 456px;
-  background-image: url(../images/0_animation5.gif);
   display: block;
   position: absolute;
-  top: 29px;
-  left: 533px;
   z-index: 2;
+  background-repeat: no-repeat;
+}
+
+.russlandhaus__section.-section-1 figure:before {
+  @extend %russlandhaus__animation;
+  width: 210px;
+  height: 456px;
+  top: 195px;
+  left: 583px;
+  background-image: url(../images/0_animation1a.gif);
+}
+
+.russlandhaus__section.-section-1 figure:after {
+  @extend %russlandhaus__animation;
+  width: 34px;
+  height: 57px;
+  top: 99px;
+  left: 500px;
+  background-image: url(../images/0_animation1b.gif);
+}
+
+.russlandhaus__section.-section-2 figure:before {
+  @extend %russlandhaus__animation;
+  width: 210px;
+  height: 456px;
+  top: 24px;
+  left: 263px;
+  background-image: url(../images/0_animation2a.gif);
+}
+
+.russlandhaus__section.-section-2 figure:after {
+  @extend %russlandhaus__animation;
+  width: 234px;
+  height: 488px;
+  top: 9px;
+  left: 573px;
+  background-image: url(../images/0_animation2b.gif);
+}
+
+
+.russlandhaus__section.-section-3 figure:before {
+  @extend %russlandhaus__animation;
+  width: 349px;
+  height: 183px;
+  top: 209px;
+  left: 89px;
+  background-image: url(../images/0_animation3a.gif);
+}
+
+.russlandhaus__section.-section-3 figure:after {
+  @extend %russlandhaus__animation;
+  width: 167px;
+  height: 494px;
+  top: 21px;
+  left: 536px;
+  background-image: url(../images/0_animation3b.gif);
+}
+
+.russlandhaus__section.-section-4 figure:before {
+  @extend %russlandhaus__animation;
+  width: 526px;
+  height: 167px;
+  top: 16px;
+  left: 255px;
+  background-image: url(../images/0_animation4a.gif);
+}
+
+.russlandhaus__section.-section-4 figure:after {
+  @extend %russlandhaus__animation;
+  width: 834px;
+  height: 255px;
+  top: 195px;
+  left: -34px;
+  background-image: url(../images/0_animation4b.gif);
+}
+
+.russlandhaus__section.-section-5 figure:before {
+  @extend %russlandhaus__animation;
+  width: 210px;
+  height: 456px;
+  top: 26px;
+  left: 533px;
+  background-image: url(../images/0_animation5.gif);
 }
