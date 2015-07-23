@@ -1,16 +1,13 @@
----
-# main scss file for https://github.com/correctiv/russlandhaus/
----
 @charset "utf-8";
 
 // breakpoints, borrowed from correctiv.org
-$screen-xs: 480px;
-$screen-sm: 768px;
-$screen-md: 992px;
-$screen-lg: 1200px;
+@screen-xs: 480px;
+@screen-sm: 768px;
+@screen-md: 992px;
+@screen-lg: 1200px;
 
-$grey: #daddca;
-$purple: #c81455;
+@grey: #daddca;
+@purple: #c81455;
 
 .article {
   width: 100%;
@@ -23,14 +20,14 @@ $purple: #c81455;
     position: relative;
     z-index: 0;
     margin: 30px 0 60px 0;
-    border-top: 1px solid $grey;
-    border-bottom: 1px solid $grey;
+    border-top: 1px solid @grey;
+    border-bottom: 1px solid @grey;
   }
 
   figcaption {
     padding: 15px;
     margin: 0 15px -30px 15px;
-    background: $purple;
+    background: @purple;
     float: right;
 
     h4 {
@@ -52,7 +49,7 @@ $purple: #c81455;
 }
 
 // Small screens / mobile landscape
-@media (min-width: $screen-xs) {
+@media (min-width: @screen-xs) {
   .russlandhaus__section {
     figcaption {
       margin-left: 30%;
@@ -61,8 +58,8 @@ $purple: #c81455;
 }
 
 // > Small screens / tablet portrait
-@media (min-width: $screen-sm) {
-  %russlandhaus__animation {
+@media (min-width: @screen-sm) {
+  .russlandhaus__animation() {
     content: "";
     display: block;
     position: absolute;
@@ -125,7 +122,7 @@ $purple: #c81455;
       }
 
       figure:before {
-        @extend %russlandhaus__animation;
+        .russlandhaus__animation();
         width: 210px;
         height: 456px;
         top: 234px;
@@ -134,7 +131,7 @@ $purple: #c81455;
       }
 
       figure:after {
-        @extend %russlandhaus__animation;
+        .russlandhaus__animation();
         width: 34px;
         height: 57px;
         top: 138px;
@@ -152,7 +149,7 @@ $purple: #c81455;
       }
 
       figure:before {
-        @extend %russlandhaus__animation;
+        .russlandhaus__animation();
         width: 210px;
         height: 456px;
         top: 64px;
@@ -161,7 +158,7 @@ $purple: #c81455;
       }
 
       figure:after {
-        @extend %russlandhaus__animation;
+        .russlandhaus__animation();
         width: 234px;
         height: 488px;
         top: 49px;
@@ -179,7 +176,7 @@ $purple: #c81455;
       }
 
       figure:before {
-        @extend %russlandhaus__animation;
+        .russlandhaus__animation();
         width: 349px;
         height: 183px;
         top: 209px;
@@ -188,7 +185,7 @@ $purple: #c81455;
       }
 
       figure:after {
-        @extend %russlandhaus__animation;
+        .russlandhaus__animation();
         width: 167px;
         height: 494px;
         top: 21px;
@@ -205,7 +202,7 @@ $purple: #c81455;
       }
 
       figure:before {
-        @extend %russlandhaus__animation;
+        .russlandhaus__animation();
         width: 526px;
         height: 167px;
         top: 16px;
@@ -214,7 +211,7 @@ $purple: #c81455;
       }
 
       figure:after {
-        @extend %russlandhaus__animation;
+        .russlandhaus__animation();
         width: 834px;
         height: 255px;
         top: 195px;
@@ -231,7 +228,7 @@ $purple: #c81455;
       }
 
       figure:before {
-        @extend %russlandhaus__animation;
+        .russlandhaus__animation();
         width: 210px;
         height: 456px;
         top: 26px;
@@ -243,7 +240,7 @@ $purple: #c81455;
 }
 
 // medium sized screens / tablet landscape
-@media (min-width: $screen-md) {
+@media (min-width: @screen-md) {
   .russlandhaus__section.-section-1 {
     figcaption {
       top: 230px;

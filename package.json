@@ -1,0 +1,25 @@
+{
+  "name": "russlandhaus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^5.2.0",
+    "ecstatic": "^0.8.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-less": "^3.0.3",
+    "gulp-livereload": "^3.8.0",
+    "gulp-watch": "^4.3.3",
+    "http": "0.0.0",
+    "less": "^2.5.1",
+    "livereload": "^0.3.7",
+    "stream-combiner2": "^1.0.2",
+    "watch": "^0.16.0"
+  }
+}
