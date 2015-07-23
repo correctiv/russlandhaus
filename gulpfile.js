@@ -7,8 +7,9 @@ var combiner = require('stream-combiner2');
 var http = require('http');
 var ecstatic = require('ecstatic');
 
+var DIST = 'dist/';
 var CSS_SOURCE = 'less';
-var CSS_DEST = 'css';
+var CSS_DEST = 'dist/css';
 var MAIN_LESS_FILE = '/main.less';
 var SERVER_PORT = 1337;
 
@@ -48,10 +49,22 @@ gulp.task('serve', function() {
   http.createServer(ecstatic({ root: __dirname })).listen(SERVER_PORT);
 });
 
+// copy static assets to dist folder
+gulp.task('images', function() {
+  return gulp.src('images/**/*.{png,jpg,jpeg,gif}')
+    .pipe(gulp.dest(DIST + 'images/'));
+});
+
+// copy example to dist folder
+gulp.task('html', function() {
+  return gulp.src('example/**/*.html')
+    .pipe(gulp.dest(DIST + 'example/'));
+});
+
 /* Run a server for development */
 // gulp.task('serve', ['serve:backend', 'less', 'less_themes', 'watch']);
-gulp.task('default', ['less', 'watch', 'serve']);
+gulp.task('default', ['less', 'html', 'images', 'watch', 'serve']);
 
 /* Create a build of frontend code */
 // gulp.task('default', ['less', 'less_themes']);
-gulp.task('build', ['less']);
+gulp.task('build', ['less', 'html', 'images']);
